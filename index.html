@@ -18,29 +18,14 @@
   </head>
 
   <body>
-    
- 
-
-
-    <div class="row">
-      <div class="column">
-        <h1>readsio</h1>
-      </div>
-      <div class="column">
-        <button class="trigger">Add Book</button>
+    <div class="toprow">
+      <div class="topcolumn">
+        <h1 class="header">readsio</h1>
+        <div class="topcolumn">
+          <h3>Your personal library</h3>
+        </div>
       </div>
     </div>
-
-    <div id="mySidenav" class="sidenav">
-      <a href="#" id="about">About</a>
-      <a href="#" id="blog">Blog</a>
-      <a href="#" id="projects">Projects</a>
-      <a href="#" id="contact">Contact</a>
-    </div>
-
-
-
-
 
     <!-- Popup modal-->
     <div class="modal">
@@ -77,7 +62,17 @@
 
     <!--book cards will go here-->
 
-    <h1 class="library">My Library</h1>
+    <div class="row">
+      <div class="column">
+        <button class="trigger">Add Book</button>
+      </div>
+      <div class="column">
+        <form id="form">
+          <input type="search" id="query" name="q" placeholder="Search..." />
+          <button>Search</button>
+        </form>
+      </div>
+    </div>
 
     <div class="main">
       <ul class="cards">
