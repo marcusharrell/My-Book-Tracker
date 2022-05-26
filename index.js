@@ -15,6 +15,19 @@
 
 // All of your book objects are going to be stored in a simple array, so add a function to the script (not the constructor) that can take user’s input and store the new book objects into an array. Your code should look something like this:
 
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+
+
+
+
+
+
 let myLibrary = [];
 
 function Book() {
@@ -29,9 +42,9 @@ function addBookToLibrary() {
 const modal = document.querySelector(".modal");
 const trigger = document.querySelector(".trigger");
 const closeButton = document.querySelector(".close-button");
-const submitButton = document.querySelector(".submit-button")
+const submitButton = document.querySelector(".submit-button");
 
-// display modal 
+// display modal
 function toggleModal() {
   modal.classList.toggle("show-modal");
 }
@@ -45,11 +58,9 @@ function windowOnClick(event) {
 
 // when user submits book
 function onSubmit(event) {
-    event.preventDefault(); // <-- prevents page from reloading upon clicking
-    toggleModal() // closes the modal
-
+  event.preventDefault(); // <-- prevents page from reloading upon clicking
+  toggleModal(); // closes the modal
 }
-
 
 trigger.addEventListener("click", toggleModal);
 closeButton.addEventListener("click", toggleModal);
