@@ -9,11 +9,12 @@
     <title>Library Checkout System</title>
   </head>
   <body>
+    <div class="heading">
+    <h1>Welcome to your digital library</h1>
     <h1>Click the button below to add a new book to your Library</h1>
-    <div class="add-book">
-      <button class="trigger">Add New Book</button>
-    </div>
+  </div>
 
+<!-- Popup modal-->
     <div class="modal">
       <div class="modal-content">
         <span class="close-button">×</span>
@@ -46,12 +47,13 @@
       </div>
     </div>
 
-    <h1>My Library</h1>
+    
     <!--book cards will go here-->
     <div class="main">
       <ul class="cards">
         <li class="cards_item">
           <div class="card">
+            <div class="card_image"><img src="book1.jpeg"></div>
             <div class="card_content">
               <h2 class="card_title">Book Example 1</h2>
               <p class="card_text">Author of book goes here</p>
@@ -61,6 +63,7 @@
         </li>
         <li class="cards_item">
           <div class="card">
+            <div class="card_image"><img src="book2.webp"></div>
             <div class="card_content">
               <h2 class="card_title">Book Example 2</h2>
               <p class="card_text">Author of book goes here</p>
@@ -70,6 +73,7 @@
         </li>
         <li class="cards_item">
           <div class="card">
+            <div class="card_image"><img src="book3.jpeg"></div>
             <div class="card_content">
               <h2 class="card_title">Book Example 3</h2>
               <p class="card_text">Author of book goes here</p>
@@ -79,6 +83,13 @@
         </li>
       </ul>
     </div>
+
+    <div class="add-book">
+      <button class="trigger">Add New Book</button>
+    </div>
+
+
+
 
     <script src="index.js"></script>
   </body>
