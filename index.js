@@ -15,12 +15,31 @@
 
 // All of your book objects are going to be stored in a simple array, so add a function to the script (not the constructor) that can take user’s input and store the new book objects into an array. Your code should look something like this:
 
-let myLibrary = []
+let myLibrary = [];
 
 function Book() {
-    // the construcor...
+  // the construcor...
 }
 
 function addBookToLibrary() {
-    // do stuff here
+  // do stuff here
 }
+
+// popup modal
+const modal = document.querySelector(".modal");
+const trigger = document.querySelector(".trigger");
+const closeButton = document.querySelector(".close-button");
+
+function toggleModal() {
+  modal.classList.toggle("show-modal");
+}
+
+function windowOnClick(event) {
+  if (event.target === modal) {
+    toggleModal();
+  }
+}
+
+trigger.addEventListener("click", toggleModal);
+closeButton.addEventListener("click", toggleModal);
+window.addEventListener("click", windowOnClick);
