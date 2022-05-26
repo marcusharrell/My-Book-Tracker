@@ -1,5 +1,5 @@
 # Readio
-Readio is a open-source ePUB reader that makes it easy to read your e-books, manage your library, and track read progress
+Readio is a open-source ePUB reader that makes it easy to read your e-books, manage your library, and track reading progress
 
 ## Motivation
 As an avid reader, I wanted to create something that made it easy to manage EPUB files and display them in a beautiful way. 
@@ -10,6 +10,21 @@ Will add screenshots in the future
 
 ## Features
 Features? Ah, yes. 
+
+
+<!-- ROADMAP -->
+## Roadmap
+
+- [x] Add Changelog
+- [ ] Google login functionality
+- [ ] Book search function 
+- [ ] App support
+
+See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
 
 <!-- ## API Reference
 
