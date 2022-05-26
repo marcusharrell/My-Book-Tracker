@@ -10,8 +10,10 @@
   </head>
   <body>
     <h1>Click the button below to add a new book to your Library</h1>
+    <div class="add-book">
+      <button class="trigger">Add New Book</button>
+    </div>
 
-    <button class="trigger">Add New Book</button>
     <div class="modal">
       <div class="modal-content">
         <span class="close-button">×</span>
@@ -44,10 +46,39 @@
       </div>
     </div>
 
-    <div class="library">
-      <h1>My Library</h1> 
-      <!--book cards will go here-->
-    </div> 
+    <h1>My Library</h1>
+    <!--book cards will go here-->
+    <div class="main">
+      <ul class="cards">
+        <li class="cards_item">
+          <div class="card">
+            <div class="card_content">
+              <h2 class="card_title">Book Example 1</h2>
+              <p class="card_text">Author of book goes here</p>
+              <button class="btn card_btn">Read More</button>
+            </div>
+          </div>
+        </li>
+        <li class="cards_item">
+          <div class="card">
+            <div class="card_content">
+              <h2 class="card_title">Book Example 2</h2>
+              <p class="card_text">Author of book goes here</p>
+              <button class="btn card_btn">Read More</button>
+            </div>
+          </div>
+        </li>
+        <li class="cards_item">
+          <div class="card">
+            <div class="card_content">
+              <h2 class="card_title">Book Example 3</h2>
+              <p class="card_text">Author of book goes here</p>
+              <button class="btn card_btn">Read More</button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
 
     <script src="index.js"></script>
   </body>

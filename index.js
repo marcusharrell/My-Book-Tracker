@@ -45,8 +45,8 @@ function windowOnClick(event) {
 
 // when user submits book
 function onSubmit(event) {
-    event.preventDefault();
-    toggleModal()
+    event.preventDefault(); // <-- prevents page from reloading upon clicking
+    toggleModal() // closes the modal
 
 }
 
