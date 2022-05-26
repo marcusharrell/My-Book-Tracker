@@ -15,37 +15,12 @@
 
 // All of your book objects are going to be stored in a simple array, so add a function to the script (not the constructor) that can take user’s input and store the new book objects into an array. Your code should look something like this:
 
+let myLibrary = []
 
-// defining book class for when user adds a book
-
-let myLibrary = [];
-
-const disp = document.getElementById("booktitle")
-
-// object constructor to create Book object with properties of title, author, and pages
-
-function Book(title, author, pages) {
-  this.title = title
-  this.author = author
-  this.pages = pages
+function Book() {
+    // the construcor...
 }
-
-// calling the constructor function to create new Book object, while passing book info to object 
-const hobbit = new Book("The Hobbit", "J. R. R. Tolkien", 295)
-
-const harryPotter = new Book("Harry Potter", "J. K. Rowling", 223)
-
-
-
-myLibrary.push(harryPotter, hobbit)
-
 
 function addBookToLibrary() {
-  // for of loop to iterate through every object in array
- for (const book of myLibrary){
-  const newBook = document.createTextNode(book.title)
-  disp.appendChild(newBook)
- }
+    // do stuff here
 }
-
-document.getElementById("btn").addEventListener("click", addBookToLibrary);
