@@ -61,3 +61,9 @@ trigger.addEventListener("click", toggleModal);
 closeButton.addEventListener("click", toggleModal);
 window.addEventListener("click", windowOnClick);
 submitButton.addEventListener("click", onSubmit);
+
+
+/* TODO: 
+[ ] - create function that will add book into library. Must be visually displayed onto dom
+[ ] - button to delete book from library
+[x] - array to store library books created from Book constructor
