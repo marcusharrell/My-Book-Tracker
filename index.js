@@ -3,7 +3,14 @@
 [ ] - button to delete book from library
 [x] - array to store library books created from Book constructor
 [ ] - refactor newBookCard function..
+[x] - connect add book button so that newBookCard is ran
+[ ] - fix book card size
+[ ] - add book progress
 */
+
+
+// library array
+let myLibrary = [];
 
 // ul of all cards
 const cardList = document.querySelector(".cards");
@@ -16,6 +23,7 @@ const Book = function (title, author, pages) {
   book.author = author;
   book.pages = pages;
   book.read = false;
+  myLibrary.push(book);
   return book;
 };
 
@@ -62,18 +70,17 @@ const newBookCard = (title, author) => {
 };
 
 // test books..
-let hobbit = Book("The Hobbit", "J. R. R. Tolkien", 310);
-let harryPotter = Book("Harry Potter", "J. K. Rowling", 223);
-let greatGatsby = Book("The Great Gatsby", "F. Scott Fitzgerald", 208);
-let mobyDick = Book("Moby-Dick", "Herman Melville", 378);
+// let hobbit = Book("The Hobbit", "J. R. R. Tolkien", 310);
+// let harryPotter = Book("Harry Potter", "J. K. Rowling", 223);
+// let greatGatsby = Book("The Great Gatsby", "F. Scott Fitzgerald", 208);
+// let mobyDick = Book("Moby-Dick", "Herman Melville", 378);
 
 // test books..
 
-// library array
-let myLibrary = [hobbit, harryPotter, greatGatsby, mobyDick];
-
-for (const book of myLibrary) {
-  newBookCard(book.title, book.author);
+function addBooks() {
+  for (const book of myLibrary) {
+    newBookCard(book.title, book.author);
+  }
 }
 
 // popup modal
@@ -97,10 +104,14 @@ function windowOnClick(event) {
 // when user submits book
 function onSubmit(event) {
   event.preventDefault(); // <-- prevents page from reloading upon clicking
+  title = document.getElementById("title");
+  author = document.getElementById("Author");
+  new Book(title.value, author.value);
+  addBooks();
   toggleModal(); // closes the modal
 }
 
 trigger.addEventListener("click", toggleModal);
 closeButton.addEventListener("click", toggleModal);
-window.addEventListener("click", windowOnClick);
+// window.addEventListener("click", windowOnClick); // when user clicks outside of modal, it closes
 submitButton.addEventListener("click", onSubmit);
