@@ -112,7 +112,7 @@ img {
 }
 
 .btn {
-  color: #ffffff;
+  height: auto;
   padding: 0.8rem;
   font-size: 14px;
   text-transform: uppercase;
@@ -121,12 +121,12 @@ img {
   display: block;
   width: 100%;
   cursor: pointer;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: #297bff8c
 }
 
 .btn:hover {
-  background-color: rgba(255, 255, 255, 0.12);
+  background-color: rgba(63, 237, 110, 0.357);
 }
 
 .cards {
@@ -161,7 +161,7 @@ img {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  height: 500px;
+  height: fit-content;
 }
 
 .card_content {
