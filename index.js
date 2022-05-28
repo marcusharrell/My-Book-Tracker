@@ -8,7 +8,6 @@
 [ ] - add book progress
 */
 
-
 // library array
 let myLibrary = [];
 
@@ -23,7 +22,6 @@ const Book = function (title, author, pages) {
   book.author = author;
   book.pages = pages;
   book.read = false;
-  myLibrary.push(book);
   return book;
 };
 
@@ -77,11 +75,9 @@ const newBookCard = (title, author) => {
 
 // test books..
 
-function addBooks() {
-  for (const book of myLibrary) {
-    newBookCard(book.title, book.author);
-  }
-}
+// function addBook(title, author) {
+//     newBookCard(book.title, book.author);
+// }
 
 // popup modal
 const modal = document.querySelector(".modal");
@@ -106,8 +102,8 @@ function onSubmit(event) {
   event.preventDefault(); // <-- prevents page from reloading upon clicking
   title = document.getElementById("title");
   author = document.getElementById("Author");
-  new Book(title.value, author.value);
-  addBooks();
+  let book = new Book(title.value, author.value);
+  newBookCard(book.title, book.author);
   toggleModal(); // closes the modal
 }
 

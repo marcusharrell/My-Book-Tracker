@@ -157,7 +157,7 @@ img {
 .card {
   background-color: white;
   border-radius: 0.25rem;
-  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.701);
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -169,17 +169,19 @@ img {
 }
 
 .card_title {
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color: #000000;
   font-size: 1.1rem;
-  font-weight: 700;
+  font-weight: 900;
   letter-spacing: 1px;
   text-transform: capitalize;
   margin: 0px;
 }
 
 .card_text {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color: #000000;
-  font-size: 0.875rem;
+  font-size:  1rem;
   line-height: 1.5;
   margin-bottom: 1.25rem;
   font-weight: 400;
