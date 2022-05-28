@@ -13,6 +13,7 @@ let myLibrary = [];
 
 // ul of all cards
 const cardList = document.querySelector(".cards");
+const errorDiv = document.querySelector(".error");
 
 const Book = function (title, author, pages) {
   let book = {};
@@ -73,11 +74,7 @@ const newBookCard = (title, author) => {
 // let greatGatsby = Book("The Great Gatsby", "F. Scott Fitzgerald", 208);
 // let mobyDick = Book("Moby-Dick", "Herman Melville", 378);
 
-// test books..
-
-// function addBook(title, author) {
-//     newBookCard(book.title, book.author);
-// }
+// / test books..
 
 // popup modal
 const modal = document.querySelector(".modal");
@@ -97,13 +94,28 @@ function windowOnClick(event) {
   }
 }
 
+// function noAuthor() {
+//   if (a.value === '')
+//   return true;
+// }
+
+const showError = () => {
+  const error = "You must add at least a title";
+  errorDiv.innerHTML = error;
+};
+
 // when user submits book
 function onSubmit(event) {
   event.preventDefault(); // <-- prevents page from reloading upon clicking
   title = document.getElementById("title");
   author = document.getElementById("Author");
+  if (author.value == "" && title.value == "") {
+    showError();
+    return;
+  }
   let book = new Book(title.value, author.value);
   newBookCard(book.title, book.author);
+  document.getElementById("bookForm").reset();
   toggleModal(); // closes the modal
 }
 
